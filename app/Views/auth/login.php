@@ -1,14 +1,16 @@
 <div class="row align-items-center">
     <div class="col-md-8 bg-primary p-5 min-vh-100 align-items-center d-flex justify-content-center">
-        <div>
-            <h1>APLIKASI E-MONEV</h1>
+        <div class="text-white">
+            <h1 class="fw-bold">APLIKASI E-MONEV</h1>
             <p>MONITORING & EVALUASI DESK PILKADA 2024</p>
         </div>
     </div>
     <div class="col-md-4">
         <div class="card border-none shadow">
             <div class="card-body text-center">
-                <div class="w-50 h-50 bg-secondary">img</div>
+                <div class="w-100 d-flex justify-content-center align-items-center mb-3">
+                    <img src="/assets/img/logoKota.png" alt="" class="w-50">
+                </div>
                 <h4 class="fw-semibold">SILAHKAN LOGIN</h4>
                 <p class="text-secondary">
                     Selamat Datang
