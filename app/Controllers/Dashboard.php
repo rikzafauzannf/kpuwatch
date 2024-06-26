@@ -38,4 +38,22 @@ class Dashboard extends BaseController
         echo view("layout/footer",$data);
         return '';
     }
+
+    public function DashboardQuickCount(): string
+    {
+        $data =[
+            "title" => "Dashboard E-Monev",
+            "braidcumbs" => [
+                ["label"=> "Dashboard" , "url" => base_url("/")],
+                ["label"=> "Dashboard QuickCount" , "url" => base_url("/dashboardquickcount")]
+            ]
+        ];
+        echo view("layout/header",$data);
+        echo view("layout/nav" ,$data);
+        echo view("layout/sidebar",$data);
+        echo view("layout/braidcumb",$data);
+        echo view("dashboard/dashboardQuickCount",$data);
+        echo view("layout/footer",$data);
+        return '';
+    }
 }
