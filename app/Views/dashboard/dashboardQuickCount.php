@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center align-items-center">
+<div class="d-flex justify-content-center align-items-center mb-4">
     <div class="text-center">
         <h4 class="fw-semibold">
             QUICK COUNT PILKADA <br>
@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<div class="card">
+<div class="card mb-4">
     <div class="card-body">
         <div class="row">
             <div class="col-md-8">
@@ -38,104 +38,60 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-end">
-                    <p>IND</p>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-md-4">
-                        img
+<div class="row" data-slick='{"slidesToShow": 2, "slidesToScroll": 4}'>
+    <?php
+    for ($i = 1; $i <= 4; $i++) :
+    ?>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-end">
+                        <p>IND</p>
                     </div>
-                    <div class="col-md-8">
-                        <h4>Nama Paslon</h4>
-                        <p class="text-secondary">Calon Walikota</p>
-                    </div>
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
-                        <h4>Nama Paslon</h4>
-                        <p class="text-secondary">
-                            Calon Wakil Walikota
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-end">
-                    <p>IND</p>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
-                        <h4>Nama Paslon</h4>
-                        <p class="text-secondary">Calon Walikota</p>
-                    </div>
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            img
+                        </div>
+                        <div class="col-md-9">
+                            <p class="fw-bold">Nama Paslon <br>
+                                <span class="fw-light text-secondary">Calon Wali Kota</span>
+                            </p>
+                        </div>
+                        <div class="col-md-3">
+                            img
+                        </div>
+                        <div class="col-md-9">
+                            <p class="fw-bold">Nama Paslon <br>
+                                <span class="fw-light text-secondary">Calon Wali Kota</span>
+                            </p>
 
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-end">
-                    <p>IND</p>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
-                        <h4>Nama Paslon</h4>
-                        <p class="text-secondary">Calon Walikota</p>
-                    </div>
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
+    <?php
+    endfor;
+    ?>
+</div>
 
-                    </div>
-                </div>
-            </div>
-        </div>
+<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+    <div>
+        <h3>1</h3>
     </div>
-    <div class="col-md-3">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-end">
-                    <p>IND</p>
-                </div>
-                <div class="row align-items-center">
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
-                        <h4>Nama Paslon</h4>
-                        <p class="text-secondary">Calon Walikota</p>
-                    </div>
-                    <div class="col-md-4">
-                        img
-                    </div>
-                    <div class="col-md-8">
-
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div>
+        <h3>2</h3>
+    </div>
+    <div>
+        <h3>3</h3>
+    </div>
+    <div>
+        <h3>4</h3>
+    </div>
+    <div>
+        <h3>5</h3>
+    </div>
+    <div>
+        <h3>6</h3>
     </div>
 </div>
