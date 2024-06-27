@@ -89,7 +89,7 @@
     <!-- table -->
     <div class="col-md-12 mt-4">
         <div class="table-responsive">
-            <table class="table table-bordered table-sm">
+            <table class="table table-bordered table-sm dataTable">
                 <thead class="table-primary">
                     <tr>
                         <th scope="col">No.</th>

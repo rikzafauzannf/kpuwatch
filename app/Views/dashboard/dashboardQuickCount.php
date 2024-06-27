@@ -34,7 +34,9 @@
                 </div>
             </div>
         </div>
-        <h1>chart</h1>
+        <div>
+            <canvas id="chartSuara"></canvas>
+        </div>
     </div>
 </div>
 
@@ -48,7 +50,7 @@
                     <div class="d-flex justify-content-end">
                         <p>IND</p>
                     </div>
-                    <div class="row align-items-center">
+                    <div class="row align-items-center g-1">
                         <div class="col-md-3">
                             img
                         </div>
@@ -75,23 +77,25 @@
     ?>
 </div>
 
-<div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
-    <div>
-        <h3>1</h3>
-    </div>
-    <div>
-        <h3>2</h3>
-    </div>
-    <div>
-        <h3>3</h3>
-    </div>
-    <div>
-        <h3>4</h3>
-    </div>
-    <div>
-        <h3>5</h3>
-    </div>
-    <div>
-        <h3>6</h3>
-    </div>
-</div>
+<script>
+  const ctx = document.getElementById('chartSuara');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Paslon 1', 'Paslon 1', 'Paslon 1', 'Paslon 1', 'Paslon 1', 'Paslon 1'],
+      datasets: [{
+        label: 'Persentase suara',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>

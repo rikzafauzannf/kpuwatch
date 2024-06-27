@@ -40,6 +40,12 @@
         }
     });
 </script> <!--end::OverlayScrollbars Configure--> <!--end::Script-->
+<!-- dataTable -->
+ <script>
+    $(document).ready( function () {
+    $('.dataTable').DataTable();
+} );
+ </script>
 </body><!--end::Body-->
 
 </html>
