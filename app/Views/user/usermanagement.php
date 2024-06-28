@@ -20,7 +20,10 @@
                 for ($i = 1; $i <= 20; $i++) :
                 ?>
                     <tr>
-                        <th scope="row">Rikza Fauzan Nurfadilah, S.Kom</th>
+                        <th scope="row">
+                            <img src="/assets/img/avatar.png" alt="" width="40" height="40" class="rounded-pill object-cover">
+                            Rikza Fauzan Nurfadilah, S.Kom
+                        </th>
                         <td class="text-start">4320945987603</td>
                         <td><span class="badge text-bg-primary">Lurah</span></td>
                         <td>
@@ -54,7 +57,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="row g-3">
+                <div class="row">
                     <div class="col-md-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">
@@ -66,7 +69,7 @@
                     <div class="col-md-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">
-                                <i class="bi bi-user"></i>
+                                <i class="bi bi-people"></i>
                             </span>
                             <input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="Nama" aria-describedby="basic-addon1" name="namalengkap">
                         </div>
@@ -74,7 +77,7 @@
                     <div class="col-md-12">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">
-                                <i class="bi bi-user"></i>
+                                <i class="bi bi-people"></i>
                             </span>
                             <input type="text" class="form-control" placeholder="Jabatan" aria-label="jabatan" aria-describedby="basic-addon1" name="jabatan">
                         </div>
@@ -91,7 +94,7 @@
                         <p class="fw-medium">Pilih Hak Akses Pengguna</p>
                     </div>
                     <div class="col-md-4">
-                        <div class="form-check">
+                        <div class="form-check shadow">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Default radio

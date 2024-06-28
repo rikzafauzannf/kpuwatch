@@ -194,7 +194,7 @@
                 <hr class="text-white">
                 <!-- master data -->
                 <li class="nav-header">Master Data PPS</li>
-                <li class="nav-item"> <a href="/usermanagement" class="nav-link"> <i class="nav-icon bi bi-user"></i>
+                <li class="nav-item"> <a href="/usermanagement" class="nav-link"> <i class="nav-icon bi bi-people"></i>
                         <p>Daftar Pengguna</p>
                     </a> </li>
                 <li class="nav-item"> <a href="../docs/introduction.html" class="nav-link"> <i class="nav-icon bi bi-database-check"></i>
