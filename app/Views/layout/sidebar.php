@@ -3,18 +3,18 @@
     <div class="sidebar-wrapper">
         <nav class="mt-2"> <!--begin::Sidebar Menu-->
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-            <li class="nav-item">
-                <div class="w-100 p-3 d-flex justify-content-center align-items-center">
-                    <img src="/assets/img/avatar.png" class="rounded-pill w-50"/>
-                </div>
+                <li class="nav-item">
+                    <div class="w-100 p-3 d-flex justify-content-center align-items-center">
+                        <img src="/assets/img/avatar.png" class="rounded-pill w-50" />
+                    </div>
                     <a href="#" class="nav-link"> <i class="nav-icon bi bi-check2-circle text-success"></i>
                         <p class="fs-5 fw-semibold">
                             KPU KEC
                         </p>
                     </a>
-                </li>    
+                </li>
                 <hr class="text-white">
-            <li class="nav-item">
+                <li class="nav-item">
                     <a href="/dashboard" class="nav-link"> <i class="nav-icon bi bi-speedometer"></i>
                         <p>
                             Dashboard
@@ -194,6 +194,9 @@
                 <hr class="text-white">
                 <!-- master data -->
                 <li class="nav-header">Master Data PPS</li>
+                <li class="nav-item"> <a href="/usermanagement" class="nav-link"> <i class="nav-icon bi bi-user"></i>
+                        <p>Daftar Pengguna</p>
+                    </a> </li>
                 <li class="nav-item"> <a href="../docs/introduction.html" class="nav-link"> <i class="nav-icon bi bi-database-check"></i>
                         <p>Data DPT</p>
                     </a> </li>

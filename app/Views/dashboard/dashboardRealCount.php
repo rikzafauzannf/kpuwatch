@@ -35,7 +35,7 @@
             </div>
         </div>
         <div>
-            <div id="chart"></div>
+            <canvas id="chartSuara"></canvas>
         </div>
     </div>
 </div>
@@ -86,36 +86,51 @@
     ?>
 </div>
 
-
+<div class="mt-4">
+    <h4>Data Rekapitulasi Tabulasi</h4>
+    <div class="table-responsive">
+        <table class="table-bordered table-sm dataTable w-100">
+            <thead class="table-primary">
+                <tr>
+                    <th>No.</th>
+                    <th>Kecamatan</th>
+                    <th>Jumlah DPT</th>
+                    <th>Jumlah TPS</th>
+                    <th>Total Suara Sah</th>
+                    <th>Total Suara Tidak Sah</th>
+                    <th>Paslon 1</th>
+                    <th>Paslon 2</th>
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                <?php
+                for ($i = 1; $i <= 20; $i++) :
+                ?>
+                    <tr>
+                        <th scope="row" class="text-center"><?= $i ?></th>
+                        <td>Mangkubumi</td>
+                        <td>728</td>
+                        <td>100</td>
+                        <td>30</td>
+                        <td>10</td>
+                        <td>90</td>
+                        <td>99</td>
+                    </tr>
+                <?php
+                endfor;
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <script>
-    options = {
-        chart: {
-            type: 'bar'
-        },
-        series: [{
-            data: [{
-                x: 'Paslon 1',
-                y: 10
-            }, {
-                x: 'Paslon 2',
-                y: 18
-            }, {
-                x: 'Paslon 3',
-                y: 13
-            }, {
-                x: 'Paslon 4',
-                y: 10
-            }]
-        }]
-    }
-
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-    chart.render();
+    $('.dataTable').DataTable({
+        order: [
+            [3, 'ASC']
+        ]
+    });
 </script>
-
-
 
 <script>
     const ctx = document.getElementById('chartSuara');
