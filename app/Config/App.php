@@ -199,4 +199,7 @@ class App extends BaseConfig
      * @see http://www.w3.org/TR/CSP/
      */
     public bool $CSPEnabled = false;
+    public $cookieSecure = true;  // Ensure cookies are sent only over HTTPS
+    public $cookieHTTPOnly = true;  // Prevent cookies from being accessed via JavaScript
+
 }

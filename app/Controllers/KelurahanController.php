@@ -4,8 +4,12 @@ namespace App\Controllers;
 
 class KelurahanController extends BaseController
 {
-    public function index(): string
+    public function index()
     {
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+
         $data = [
             "title" => "Dashbord",
             "braidcumbs" => [
@@ -23,6 +27,10 @@ class KelurahanController extends BaseController
 
     public function dataTps(): string
     {
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+
         $data = [
             "title" => "Data TPS",
             "braidcumbs" => [
@@ -37,5 +45,14 @@ class KelurahanController extends BaseController
         echo view("kelurahan/tps", $data);
         echo view("layout/footer", $data);
         return '';
+    }
+
+    private function isLoggedIn(): bool
+    {
+        if (session()->get('logged_in')) {
+            return true;
+        }
+
+        return false;
     }
 }

@@ -15,14 +15,25 @@
                 <p class="text-secondary">
                     Selamat Datang
                 </p>
-                <form action="">
+                <?php if (session()->getFlashdata('success')) { ?>
+                    <div class="alert alert-success">
+                        <?php echo session()->getFlashdata('success'); ?>
+                    </div>
+                <?php } ?>
+                <?php if (session()->getFlashdata('error')) { ?>
+                        <div class="alert alert-danger">
+                            <?php echo session()->getFlashdata('error'); ?>
+                        </div>
+                    <?php } ?>
+
+                <?= form_open('login'); ?>                
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="bi bi-envelope"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="email" class="form-control" placeholder="Username" aria-label="Username" name="email" aria-describedby="basic-addon1" required>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -30,7 +41,7 @@
                                 <span class="input-group-text" id="basic-addon1">
                                     <i class="bi bi-key"></i>
                                 </span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="password" class="form-control" placeholder="password" aria-label="Username" name="password" aria-describedby="basic-addon1" required>
                             </div>
                         </div>
                         <div class="col-md-12">
