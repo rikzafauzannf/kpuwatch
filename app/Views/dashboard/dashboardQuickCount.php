@@ -18,12 +18,12 @@
                 <div class="w-100 h-auto p-4 rounded border border-none shadow bg-gradient-purple">
                     <div class="row align-items-center">
                         <div class="col-md-6">
-                            <h4>
+                            <h6>
                                 Data Masuk
-                            </h4>
+                            </h6>
                         </div>
                         <div class="col-md-6">
-                            <h1 class="fw-bold" style="font-size: 80px;">50%</h1>
+                            <h1 class="fw-bold" style="font-size: 42px;">50%</h1>
                         </div>
                         <div class="col-md-12 text-center">
                             <small class="fw-light">
@@ -40,7 +40,7 @@
     </div>
 </div>
 
-<div class="row" data-slick='{"slidesToShow": 2, "slidesToScroll": 4}'>
+<div class="row g-3" data-slick='{"slidesToShow": 2, "slidesToScroll": 4}'>
     <?php
     for ($i = 1; $i <= 4; $i++) :
     ?>
@@ -51,21 +51,21 @@
                         <p>IND</p>
                     </div>
                     <div class="row align-items-center g-1">
-                        <div class="col-md-3">
-                            <img src="/assets/img/avatar.png" alt="" width="50" height="50" class="rounded-pill border border-2 border-primary shadow">
+                        <div class="col-3">
+                            <img src="/assets/img/avatar.png" alt="" class="w-100 rounded-pill border border-2 border-primary shadow">
                         </div>
-                        <div class="col-md-9">
-                            <p class="fw-bold">Nama Paslon <br>
+                        <div class="col-9">
+                            <small class="fw-bold">Nama Paslon <br>
                                 <span class="fw-light">Calon Wali Kota</span>
-                            </p>
+                            </small>
                         </div>
-                        <div class="col-md-3">
-                            <img src="/assets/img/avatar.png" alt="" width="50" height="50" class="rounded-pill border border-2 border-primary shadow">
+                        <div class="col-3">
+                            <img src="/assets/img/avatar.png" alt="" class="w-100 rounded-pill border border-2 border-primary shadow">
                         </div>
-                        <div class="col-md-9">
-                            <p class="fw-bold">Nama Paslon <br>
+                        <div class="col-9">
+                            <small class="fw-bold">Nama Paslon <br>
                                 <span class="fw-light">Calon Wali Kota</span>
-                            </p>
+                            </small>
                         </div>
                         <div class="col-md-12">
                             <span class="badge text-bg-primary">#Paslon <?= $i ?></span>
@@ -73,9 +73,9 @@
                                 <p class="fw-medium">Jumlah Perolehan Suara</p>
                                 <div class="d-flex justify-content-start align-items-center">
                                     <div class="me-3">
-                                        <h1 class="fw-bold" style="font-size: 70px;">40%</h1>
+                                        <h1 class="fw-bold" style="font-size: 42px;">40%</h1>
                                     </div>
-                                    <small>dari 480.000 suara <br> Sumber <i>Sirekap KPU</i></small>
+                                    <small style="font-size: 10px;">dari 480.000 suara <br> Sumber <i>Sirekap KPU</i></small>
                                 </div>
                             </div>
                         </div>

@@ -262,16 +262,16 @@
     function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
             center: {
-                lat: -34.397,
-                lng: 150.644
+                lat: -7.351121506053825,
+                lng: 108.21657083250759
             },
-            zoom: 8
+            zoom: 15
         });
 
         marker = new google.maps.Marker({
             position: {
-                lat: -34.397,
-                lng: 150.644
+                lat: -7.351121506053825,
+                lng: 108.21657083250759
             },
             map: map,
             draggable: true
@@ -354,6 +354,10 @@
 
         fileInput.addEventListener('change', function() {
             previewImages(fileInput.files);
+        });
+
+        dropArea.addEventListener('click', function() {
+            fileInput.click();
         });
 
         dropArea.addEventListener('dragover', function(e) {
