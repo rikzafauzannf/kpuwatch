@@ -207,6 +207,10 @@
                         <p>Data DPPH</p>
                     </a> </li>
 
+                <li class="nav-item btn btn-white "> <a href="../docs/color-mode.html" class="nav-link"> <i class="nav-icon bi bi-power"></i>
+                        <p>logout</p>
+                    </a> </li>
+
             </ul> <!--end::Sidebar Menu-->
         </nav>
     </div> <!--end::Sidebar Wrapper-->
