@@ -1,48 +1,48 @@
 <div class="d-flex justify-content-start align-items-center gap-4">
-    <h5>Kelurahan : Default</h5>
-    <h5>Kecamatan : Default</h5>
+    <p class="fw-medium">Kelurahan : Default</p>
+    <p class="fw-medium">Kecamatan : Default</p>
 </div>
 <div class="row mb-4">
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-4">
-                <div class="card mb-3 bg-gradient-purple border-none shadow">
+                <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
                             Jumlah Data TPS
                         </h6>
-                        <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
-                        <small class="fw-bold">Tempat Pemungutan Suara</small>
+                        <h5 class="font-number-core">60000</h5>
+                        <small class="font-subs-core">Tempat Pemungutan Suara</small>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3 bg-gradient-purple border-none shadow">
+                <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
                             Jumlah Pemilih
                         </h6>
                         <div class="row">
                             <div class="col-6">
-                                <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
-                                <small class="fw-bold">Laki - Laki</small>
+                                <h5 class="font-number-core">60000</h5>
+                                <small class="font-subs-core">Laki - Laki</small>
                             </div>
                             <div class="col-6">
-                                <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
-                                <small class="fw-bold">Perempuan</small>
+                                <h5 class="font-number-core">60000</h5>
+                                <small class="font-subs-core">Perempuan</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3 bg-gradient-purple border-none shadow">
+                <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
                             Total Pemilih
                         </h6>
-                        <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
-                        <small class="fw-bold">Akumulasi Pemilih L + P</small>
+                        <h5 class="font-number-core">60000</h5>
+                        <small class="font-subs-core">Akumulasi Pemilih L + P</small>
                     </div>
                 </div>
             </div>
@@ -76,12 +76,12 @@
 </div>
 
 <div class="row align-items-center">
-    <div class="col-md-9">
-        <h5 class="fw-bold">
+    <div class="col-md-8">
+        <h6 class="fw-bold">
             Peta Lokasi TPS-DPT Kota Tasikmalaya
-        </h5>
+        </h6>
     </div>
-    <div class="col-md-3">
+    <div class="col-md-4">
         <!-- fillter action -->
         <!-- <div class="row g-3">
         <div class="col-md-6">
@@ -104,9 +104,9 @@
             </div>
         </div> -->
         <div class="d-flex g-3 w-full">
-            <button class="btn btn-md btn-gradient-purple">CSV</button>
-            <button class="btn btn-md btn-ghost">EXCEL</button>
-            <button class="btn btn-md btn-ghost">PDF</button>
+            <button class="btn btn-sm btn-gradient-purple">CSV</button>
+            <button class="btn btn-sm btn-ghost">EXCEL</button>
+            <button class="btn btn-sm btn-ghost">PDF</button>
             <button type="button" class="btn btn-gradient-purple" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Tambah Data
             </button>
@@ -118,17 +118,17 @@
             <table class="table table-sm dataTable w-100">
                 <thead>
                     <tr>
-                        <th scope="col">No.</th>
-                        <th scope="col">Dapl</th>
-                        <th scope="col">Kelurahan</th>
-                        <th scope="col">Kecamatan</th>
-                        <th scope="col">Jumlah Pemilih</th>
-                        <th scope="col">Meliputi RT/RW</th>
-                        <th scope="col">RT</th>
-                        <th scope="col">RW</th>
-                        <th scope="col">Ciri & Lokasi TPS</th>
-                        <th scope="col">Titik Koordinat</th>
-                        <th scope="col">Opsi</th>
+                        <th scope="col" class="fs-6">No.</th>
+                        <th scope="col" class="fs-6">Dapl</th>
+                        <th scope="col" class="fs-6">Kelurahan</th>
+                        <th scope="col" class="fs-6">Kecamatan</th>
+                        <th scope="col" class="fs-6">Jumlah Pemilih</th>
+                        <th scope="col" class="fs-6">Meliputi RT/RW</th>
+                        <th scope="col" class="fs-6">RT</th>
+                        <th scope="col" class="fs-6">RW</th>
+                        <th scope="col" class="fs-6">Ciri & Lokasi TPS</th>
+                        <th scope="col" class="fs-6">Titik Koordinat</th>
+                        <th scope="col" class="fs-6">Opsi</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -178,7 +178,7 @@
             <div class="modal-body">
                 <div class="row g-2">
                     <div class="col-md-6">
-                        <form action="">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             <div class="row g-2">
                                 <div class="col-md-4">
                                     <input type="text" class="form-control" placeholder="NO" name="NO">
@@ -189,18 +189,48 @@
                                 <div class="col-md-4">
                                     <input type="text" class="form-control" placeholder="NO TPS" name="NOTPS">
                                 </div>
-                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Kecamatan" name="Kecamatan"></div>
-                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Kelurahan" name="Kelurahan"></div>
-                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Jumlah Pemilih LK" name="jumlahLK"></div>
-                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Jumlah Pemilih P" name="jumlahP"></div>
-                                <div class="col-md-4"><input type="text" class="form-control" placeholder="Akumlasi Jumlah LK+P" name="akumulasiJumlah"></div>
-                                <div class="col-md-8"><input type="text" class="form-control" placeholder="Meliputi RT/RW" name="meliputiRT/RW"></div>
-                                <div class="col-md-2"><input type="number" class="form-control" placeholder="RT" name="RT"></div>
-                                <div class="col-md-2"><input type="number" class="form-control" placeholder="RW" name="RW"></div>
-                                <div class="col-md-8"><input type="text" class="form-control" placeholder="Ciri & Lokasi TPS" name="ciriTPS"></div>
-                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Langtitude" name="lang"></div>
-                                <div class="col-md-6"><input type="text" class="form-control" placeholder="Longtitude" name="long"></div>
-                                <div class="col-md-12"><input type="file" class="form-control" placeholder="file" name="mutiplyImage" multiple></div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Kecamatan" name="Kecamatan">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Kelurahan" name="Kelurahan">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Jumlah Pemilih LK" name="jumlahLK">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Jumlah Pemilih P" name="jumlahP">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Akumlasi Jumlah LK+P" name="akumulasiJumlah">
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Meliputi RT/RW" name="meliputiRTRW">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" placeholder="RT" name="RT">
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="number" class="form-control" placeholder="RW" name="RW">
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Ciri & Lokasi TPS" name="ciriTPS">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Latitude" name="lat">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Longitude" name="lng">
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="drag-drop-area" id="drag-drop-area">
+                                        Drag & Drop Files Here or Click to Upload
+                                    </div>
+                                    <input type="file" class="form-control" id="multipleImage" name="multipleImage[]" multiple hidden>
+                                </div>
+                                <div class="col-md-12">
+                                    <div id="preview-container" class="preview-container"></div>
+                                </div>
                                 <div class="col-md-6">
                                     <select name="kategori" id="kategori" class="form-control form-select">
                                         <option>Kategori TPS</option>
@@ -208,12 +238,15 @@
                                         <option value="Outdoor">Outdoor</option>
                                     </select>
                                 </div>
-                                <div class="col-md-12 mt-4"><button type="submit" class="btn btn-md btn-primary w-100 shadow">Simpan Data</button></div>
+                                <div class="col-md-12 mt-4">
+                                    <button type="submit" class="btn btn-md btn-primary w-100 shadow">Simpan Data</button>
+                                </div>
                             </div>
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <div id="map"></div>
+                        <input id="pac-input" class="controls form-control mb-3" type="text" placeholder="Search Box">
+                        <div id="map" style="width: 100%; height: 500px;"></div>
                     </div>
                 </div>
             </div>
@@ -222,13 +255,126 @@
 </div>
 
 <script>
+    let map;
+    let marker;
+    let searchBox;
+
     function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
+        map = new google.maps.Map(document.getElementById('map'), {
             center: {
                 lat: -34.397,
                 lng: 150.644
             },
             zoom: 8
         });
+
+        marker = new google.maps.Marker({
+            position: {
+                lat: -34.397,
+                lng: 150.644
+            },
+            map: map,
+            draggable: true
+        });
+
+        marker.addListener('dragend', function() {
+            updateLatLngFields(marker.getPosition());
+        });
+
+        const input = document.getElementById('pac-input');
+        searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        map.addListener('bounds_changed', function() {
+            searchBox.setBounds(map.getBounds());
+        });
+
+        searchBox.addListener('places_changed', function() {
+            const places = searchBox.getPlaces();
+
+            if (places.length == 0) {
+                return;
+            }
+
+            marker.setMap(null);
+
+            const bounds = new google.maps.LatLngBounds();
+            places.forEach(function(place) {
+                if (!place.geometry) {
+                    console.log("Returned place contains no geometry");
+                    return;
+                }
+
+                marker = new google.maps.Marker({
+                    map: map,
+                    title: place.name,
+                    position: place.geometry.location,
+                    draggable: true
+                });
+
+                updateLatLngFields(marker.getPosition());
+
+                marker.addListener('dragend', function() {
+                    updateLatLngFields(marker.getPosition());
+                });
+
+                if (place.geometry.viewport) {
+                    bounds.union(place.geometry.viewport);
+                } else {
+                    bounds.extend(place.geometry.location);
+                }
+            });
+            map.fitBounds(bounds);
+        });
     }
+
+    function updateLatLngFields(location) {
+        document.getElementsByName('lat')[0].value = location.lat();
+        document.getElementsByName('lng')[0].value = location.lng();
+    }
+
+    function previewImages(files) {
+        const previewContainer = document.getElementById('preview-container');
+        previewContainer.innerHTML = ''; // Clear previous previews
+
+        for (const file of files) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                previewContainer.appendChild(img);
+            }
+            reader.readAsDataURL(file);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const fileInput = document.getElementById('multipleImage');
+        const dropArea = document.getElementById('drag-drop-area');
+
+        fileInput.addEventListener('change', function() {
+            previewImages(fileInput.files);
+        });
+
+        dropArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            dropArea.classList.add('dragging');
+        });
+
+        dropArea.addEventListener('dragleave', function() {
+            dropArea.classList.remove('dragging');
+        });
+
+        dropArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            dropArea.classList.remove('dragging');
+            const files = e.dataTransfer.files;
+            fileInput.files = files;
+            previewImages(files);
+        });
+
+        $('#exampleModal').on('shown.bs.modal', function() {
+            initMap();
+        });
+    });
 </script>

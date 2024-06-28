@@ -21,3 +21,30 @@
     color: white;
 }
 
+.font-number-core{
+    font-size: 20px;
+    font-weight: bold;
+}
+.font-subs-core{
+    font-size: 11px;
+    font-weight: 600;
+}
+
+/* upload image */
+.drag-drop-area {
+            border: 2px dashed #007bff;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .preview-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .preview-container img {
+            max-width: 100px;
+            max-height: 100px;
+        }
