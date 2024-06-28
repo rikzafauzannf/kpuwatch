@@ -25,6 +25,9 @@
     <!-- apexchart -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
+    <link rel="stylesheet" href="/css/myStyle.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1MSEQDRg8EL6r6t81DUn1fwUoHWqYYiI&callback=initMap" async defer></script>
+
 </head> <!--end::Head--> <!--begin::Body-->
 
 <body class="layout-fixed sidebar-expand-lg sidebar-mini bg-body-tertiary"> <!--begin::App Wrapper-->

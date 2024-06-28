@@ -6,50 +6,50 @@
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-4">
-                <div class="card mb-3 bg-primary bg-gradient border-none shadow">
+                <div class="card mb-3 bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
                             Jumlah Data TPS
                         </h6>
-                        <h5 class="fw-bold">60000</h5>
-                        <small>Tempat Pemungutan Suara</small>
+                        <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
+                        <small class="fw-bold">Tempat Pemungutan Suara</small>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3 bg-primary bg-gradient border-none shadow">
+                <div class="card mb-3 bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
                             Jumlah Pemilih
                         </h6>
                         <div class="row">
                             <div class="col-6">
-                                <h5 class="fw-bold">60000</h5>
-                                <small>Laki - Laki</small>
+                                <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
+                                <small class="fw-bold">Laki - Laki</small>
                             </div>
                             <div class="col-6">
-                                <h5 class="fw-bold">60000</h5>
-                                <small>Perempuan</small>
+                                <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
+                                <small class="fw-bold">Perempuan</small>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card mb-3 bg-primary bg-gradient border-none shadow">
+                <div class="card mb-3 bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
                             Total Pemilih
                         </h6>
-                        <h5 class="fw-bold">60000</h5>
-                        <small>Akumulasi Pemilih L+P</small>
+                        <h5 class="fw-bold" style="font-size: 40px;">60000</h5>
+                        <small class="fw-bold">Akumulasi Pemilih L + P</small>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card">
+        <div class="card border-none border">
             <div class="card-body">
                 <form action="">
                     <div class="row">
@@ -104,10 +104,10 @@
             </div>
         </div> -->
         <div class="d-flex g-3 w-full">
-            <button class="btn btn-md btn-primary">CSV</button>
+            <button class="btn btn-md btn-gradient-purple">CSV</button>
             <button class="btn btn-md btn-ghost">EXCEL</button>
             <button class="btn btn-md btn-ghost">PDF</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-gradient-purple" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Tambah Data
             </button>
         </div>
@@ -115,8 +115,8 @@
     <!-- table -->
     <div class="col-md-12 mt-4">
         <div class="table-responsive">
-            <table class="table table-bordered table-sm dataTable w-100">
-                <thead class="table-primary">
+            <table class="table table-sm dataTable w-100">
+                <thead>
                     <tr>
                         <th scope="col">No.</th>
                         <th scope="col">Dapl</th>
@@ -169,7 +169,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Tambah Data TPS</h1>
@@ -212,9 +212,23 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <div id="map"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {
+                lat: -34.397,
+                lng: 150.644
+            },
+            zoom: 8
+        });
+    }
+</script>
