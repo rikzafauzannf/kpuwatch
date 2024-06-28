@@ -45,7 +45,7 @@
                         <li class="nav-item"> <a href="/dashboardquickcount" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
                                 <p>Quick Count</p>
                             </a> </li>
-                        <li class="nav-item"> <a href="../widgets/info-box.html" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                        <li class="nav-item"> <a href="/dashboardrealcount" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
                                 <p>Real Time</p>
                             </a> </li>
                     </ul>
