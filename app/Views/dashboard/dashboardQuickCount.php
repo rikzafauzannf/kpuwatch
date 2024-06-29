@@ -48,7 +48,7 @@
             <div class="card shadow bg-gradient-purple">
                 <div class="card-body">
                     <div class="d-flex justify-content-end">
-                        <p>IND</p>
+                        <img src="/assets/img/flagIDN.png" alt="" srcset="" class="w-25">
                     </div>
                     <div class="row align-items-center g-1">
                         <div class="col-3">
@@ -88,6 +88,22 @@
     ?>
 </div>
 
+<div class="autoplay">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script>
+    $('.autoplay').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
+    });
+</script>
 
 <script>
     options = {
