@@ -51,6 +51,7 @@
             <div class="card shadow bg-gradient-purple mx-2">
                 <div class="card-body">
                     <div class="d-flex justify-content-end">
+
                         <img src="/assets/img/flagIDN.png" alt="" srcset="" style="width: 15%;">
                     </div>
                     <div class="row align-items-center g-1">
@@ -89,9 +90,11 @@
             <?php
     endfor;
     ?>
+
 		</ul>
   </div>
 </section>
+
 
 <script>
     options = {

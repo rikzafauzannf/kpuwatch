@@ -2,15 +2,30 @@
 
 namespace App\Controllers;
 
+use App\Models\DataTpsModel;
+
 class KelurahanController extends BaseController
 {
+
+    protected $dataTpsModel;
+
+    public function __construct()
+    {
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url('/'));            
+        }
+
+        $this->dataTpsModel = new DataTpsModel();
+        $this->helpers = ['form', 'url'];
+    }
+    
     public function index()
     {
         if (!$this->isLoggedIn()) {
-            return redirect()->to(base_url(''));            
+            return redirect()->to(base_url('/'));            
         }
 
-        $data = [
+        $data = [  
             "title" => "Dashbord",
             "braidcumbs" => [
                 ["label" => "Dashboard", "url" => base_url("/")]
@@ -25,13 +40,14 @@ class KelurahanController extends BaseController
         return '';
     }
 
-    public function dataTps(): string
+    public function dataTps()
     {
         if (!$this->isLoggedIn()) {
             return redirect()->to(base_url(''));            
         }
 
         $data = [
+            'datatps' => $this->dataTpsModel->findAll(),
             "title" => "Data TPS",
             "braidcumbs" => [
                 ["label" => "Dashboard", "url" => base_url("/")],

@@ -10,6 +10,10 @@ class UserController extends BaseController
 
     public function __construct()
     {
+
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url('/'));            
+        }
         $this->model = new UserModel();
         $this->helpers = ['form', 'url'];
     }
