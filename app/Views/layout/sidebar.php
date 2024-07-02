@@ -219,7 +219,7 @@ $segments = explode('/', $path);
                         <p>Data DPPH</p>
                     </a> </li>                
                 <?php } ?>
-                <li class="nav-item"> <a href="<?php echo base_url('logout');?>" class="nav-link <?php if($segments[2] == 'dashboard'){ echo 'active'; } ?>"> <i class="nav-icon bi bi-database-check"></i>
+                <li class="nav-item"> <a href="<?php echo base_url('logout');?>" class="nav-link <?php if($segments[2] == 'dashboard'){ echo 'active'; } ?>"> <i class="nav-icon bi bi-power"></i>
                         <p>Logout</p>
                     </a> </li>                                
 

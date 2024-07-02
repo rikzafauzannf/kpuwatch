@@ -35,4 +35,4 @@ $routes->get('/usermanagement', 'UserController::index');
 // master
 $routes->get('/masterpps', 'MasterController::index');
 $routes->get('/masterppk', 'MasterController::datappk');
-
+$routes->get('/masterapk', 'MasterController::masterapk');

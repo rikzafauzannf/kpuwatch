@@ -157,25 +157,25 @@
                         <div class="col-md-12"  data-bs-toggle="tooltip" data-bs-title="NIP / Username">
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                                <input type="text" class="form-control" placeholder="NIP" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="NIP" aria-label="NIP" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="namaLengkap" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" placeholder="Jabatan" aria-label="Jabatan" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone"></i></span>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="number" class="form-control" placeholder="No Handhpne" aria-label="Phone" aria-describedby="basic-addon1">
                             </div>
                         </div>
                         <div class="col-md-12">

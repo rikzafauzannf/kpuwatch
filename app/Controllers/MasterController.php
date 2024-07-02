@@ -83,6 +83,29 @@ class MasterController extends BaseController
         return '';
     }
 
+    public function masterapk()
+    {        
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+
+        $data = [
+            'users' => $this->model->findAll(),
+            "title" => "Master APK",
+            "braidcumbs" => [
+                ["label" => "Dashboard", "url" => base_url("/")],
+                ["label" => "Daftar Pengguna", "url" => base_url("/usermanagement")]
+            ]
+        ];
+        echo view("layout/header", $data);
+        echo view("layout/nav", $data);
+        echo view("layout/sidebar", $data);
+        echo view("layout/braidcumb", $data);
+        echo view("master/masterapk", $data);
+        echo view("layout/footer", $data);
+        return '';
+    }
+
     private function isLoggedIn(): bool
     {
         if (session()->get('logged_in')) {

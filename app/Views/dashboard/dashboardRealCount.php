@@ -139,7 +139,6 @@
 </div>
 
 <script>
-    $(document).ready(function() {
         $('#data-table').DataTable({
             scrollX: true,
             scrollCollapse: true,
@@ -150,7 +149,6 @@
                 [0, 'asc'] // Initial sorting by the first column (No.)
             ]
         });
-    });
 </script>
 
 
