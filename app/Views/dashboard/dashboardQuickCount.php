@@ -17,12 +17,12 @@
             <div class="col-md-4">
                 <div class="w-100 h-auto p-4 rounded border border-none shadow bg-gradient-purple">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <h6>
                                 Data Masuk
                             </h6>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-6">
                             <h1 class="fw-bold" style="font-size: 42px;">50%</h1>
                         </div>
                         <div class="col-md-12 text-center">
@@ -40,15 +40,18 @@
     </div>
 </div>
 
-<div class="row g-3" data-slick='{"slidesToShow": 2, "slidesToScroll": 4}'>
-    <?php
+
+<section class="splide" aria-label="Splide Basic HTML Example">
+  <div class="splide__track">
+		<ul class="splide__list">
+        <?php
     for ($i = 1; $i <= 4; $i++) :
     ?>
-        <div class="col-md-3">
-            <div class="card shadow bg-gradient-purple">
+			<li class="splide__slide">
+            <div class="card shadow bg-gradient-purple mx-2">
                 <div class="card-body">
                     <div class="d-flex justify-content-end">
-                        <img src="/assets/img/flagIDN.png" alt="" srcset="" class="w-25">
+                        <img src="/assets/img/flagIDN.png" alt="" srcset="" style="width: 15%;">
                     </div>
                     <div class="row align-items-center g-1">
                         <div class="col-3">
@@ -82,28 +85,14 @@
                     </div>
                 </div>
             </div>
-        </div>
-    <?php
+            </li>
+            <?php
     endfor;
     ?>
-</div>
+		</ul>
+  </div>
+</section>
 
-<div class="autoplay">
-    <div>your content</div>
-    <div>your content</div>
-    <div>your content</div>
-</div>
-<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-<script>
-    $('.autoplay').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-    });
-</script>
 
 <script>
     options = {

@@ -6,6 +6,8 @@ use App\Models\DataTpsModel;
 
 class KelurahanController extends BaseController
 {
+
+
     protected $dataTpsModel;
 
     public function __construct()
@@ -24,7 +26,7 @@ class KelurahanController extends BaseController
             return redirect()->to(base_url('/'));            
         }
 
-        $data = [            
+        $data = [  
             "title" => "Dashbord",
             "braidcumbs" => [
                 ["label" => "Dashboard", "url" => base_url("/")]
