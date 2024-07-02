@@ -4,8 +4,12 @@ namespace App\Controllers;
 
 class Dashboard extends BaseController
 {
-    public function index(): string
-    {
+    public function index()
+    {        
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+
         $data = [
             "title" => "Dashbord",
             "braidcumbs" => [
@@ -23,6 +27,10 @@ class Dashboard extends BaseController
 
     public function DashboardQcKota(): string
     {
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+
         $data = [
             "title" => "Dashbord QC Kota",
             "braidcumbs" => [
@@ -41,6 +49,10 @@ class Dashboard extends BaseController
 
     public function DashboardQuickCount(): string
     {
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+
         $data = [
             "title" => "Dashboard E-Monev",
             "braidcumbs" => [
@@ -59,6 +71,10 @@ class Dashboard extends BaseController
 
     public function DashboardRealCount(): string
     {
+        if (!$this->isLoggedIn()) {
+            return redirect()->to(base_url(''));            
+        }
+        
         $data = [
             "title" => "Dashboard E-Monev",
             "braidcumbs" => [
@@ -73,5 +89,14 @@ class Dashboard extends BaseController
         echo view("dashboard/dashboardRealCount", $data);
         echo view("layout/footer", $data);
         return '';
+    }
+   
+    private function isLoggedIn(): bool
+    {
+        if (session()->get('logged_in')) {
+            return true;
+        }
+
+        return false;
     }
 }
