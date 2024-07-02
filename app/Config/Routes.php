@@ -9,7 +9,6 @@ $routes->get('/', 'AuthController::index');
 $routes->post('/login', 'AuthController::login');
 
 $routes->post('/user', 'UserController::store');
-// $routes->post('/useredit', 'UserController::update');
 $routes->post('/useredit/(:any)', 'UserController::update/$1');
 $routes->post('/usersdelete/(:any)', 'UserController::delete/$1');
 
@@ -25,6 +24,9 @@ $routes->get('/dashboardqckota', 'Dashboard::DashboardQcKota');
 
 // kelurahan
 $routes->get('/datatps', 'KelurahanController::dataTps');
+$routes->post('/datatpsave', 'KelurahanController::dataTpsstore');
+$routes->post('/datatpedit/(:any)', 'KelurahanController::dataTpsupdate/$1');
+$routes->post('/udatatpsavedelete/(:any)', 'KelurahanController::dataTpsdelete/$1');
 
 // userManagement
 $routes->get('/usermanagement', 'UserController::index');
