@@ -7,6 +7,7 @@ use App\Models\DataTpsModel;
 class KelurahanController extends BaseController
 {
 
+
     protected $dataTpsModel;
 
     public function __construct()

@@ -11,6 +11,7 @@ class UserController extends BaseController
     public function __construct()
     {
 
+
         if (!$this->isLoggedIn()) {
             return redirect()->to(base_url('/'));            
         }

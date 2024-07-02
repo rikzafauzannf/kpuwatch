@@ -32,3 +32,6 @@ $routes->post('/udatatpsavedelete/(:any)', 'KelurahanController::dataTpsdelete/$
 
 // userManagement
 $routes->get('/usermanagement', 'UserController::index');
+// master
+$routes->get('/masterpps', 'MasterController::index');
+

@@ -9,7 +9,7 @@
                 <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
-                            Jumlah Data TPS
+                            Jumlah Data PPS
                         </h6>
                         <h5 class="font-number-core">60000</h5>
                         <small class="font-subs-core">Tempat Pemungutan Suara</small>
@@ -20,18 +20,9 @@
                 <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
-                            Jumlah Pemilih
+                            Kecamatan
                         </h6>
-                        <div class="row">
-                            <div class="col-6">
-                                <h5 class="font-number-core">60000</h5>
-                                <small class="font-subs-core">Laki - Laki</small>
-                            </div>
-                            <div class="col-6">
-                                <h5 class="font-number-core">60000</h5>
-                                <small class="font-subs-core">Perempuan</small>
-                            </div>
-                        </div>
+                        <h1 class="fw-bold">10</h1>
                     </div>
                 </div>
             </div>
@@ -39,10 +30,9 @@
                 <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
-                            Total Pemilih
+                            Kelurahan
                         </h6>
-                        <h5 class="font-number-core">60000</h5>
-                        <small class="font-subs-core">Akumulasi Pemilih L + P</small>
+                        <h1 class="fw-bold">69</h1>
                     </div>
                 </div>
             </div>
@@ -78,7 +68,7 @@
 <div class="row align-items-center">
     <div class="col-md-8">
         <h6 class="fw-bold">
-            Peta Lokasi TPS-DPT Kota Tasikmalaya
+        Daftar PPS Kota Tasikmalaya
         </h6>
     </div>
     <div class="col-md-4">
@@ -132,9 +122,8 @@
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
-                    <?php 
-                        $i = 1;
-                        foreach ($datatps as $datatpss): 
+                    <?php
+                    for ($i = 1; $i <= 20; $i++) :
                     ?>
                         <tr>
                             <th scope="row" class="text-center"><?= $i ?></th>
@@ -151,9 +140,8 @@
                                 <a href="#" class="btn btn-ghost">Detail</a>
                             </td>
                         </tr>
-                    <?php 
-                        $i++;
-                        endforeach;                         
+                    <?php
+                    endfor;
                     ?>
                 </tbody>
             </table>
@@ -177,82 +165,63 @@
                 <h1 class="modal-title fs-5 fw-bold" id="exampleModalLabel">Tambah Data TPS</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <?php if (session()->getFlashdata('success')) { ?>
-                <div class="alert alert-success">
-                    <?php echo session()->getFlashdata('success'); ?>
-                </div>
-            <?php } ?>
-
-            <?php if (session()->getFlashdata('error')) { ?>
-                <div class="alert alert-danger">
-                    <?php foreach (session()->getFlashdata('error') as $field => $error) : ?>
-                        <p><?= $error ?></p>
-                    <?php endforeach ?>
-                </div>
-            <?php } ?>
             <div class="modal-body">
                 <div class="row g-2">
                     <div class="col-md-6">
-                        <?= form_open('datatpsave', ['enctype' => 'multipart/form-data']); ?>
+                        <form action="" method="POST" enctype="multipart/form-data">
                             <div class="row g-2">
                                 <div class="col-md-4">
                                     <input type="text" class="form-control" placeholder="NO" name="NO">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="DAPIL" name="dapil">
+                                    <input type="text" class="form-control" placeholder="DAPL" name="DAPL">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control" placeholder="NO TPS" name="notps">
+                                    <input type="text" class="form-control" placeholder="NO TPS" name="NOTPS">
                                 </div>
-                                <hr>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Kecamatan" name="Kecamatan">
                                 </div>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" placeholder="Kelurahan" name="Kelurahan">
                                 </div>
-                                <hr>                                
-                                <div class="col-md-4">
-                                    <input type="number" class="form-control" placeholder="Jumlah Pemilih LK" name="jml_l" id="jml_l">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Jumlah Pemilih LK" name="jumlahLK">
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Jumlah Pemilih P" name="jumlahP">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control" placeholder="Jumlah Pemilih P" name="jml_p" id="jml_p">
+                                    <input type="text" class="form-control" placeholder="Akumlasi Jumlah LK+P" name="akumulasiJumlah">
                                 </div>
-                                <div class="col-md-4">
-                                    <input type="number" class="form-control" placeholder="Jumlah LK+P" name="jml_lp" id="akumulasiJumlah" readonly>
-                                </div>
-                                <hr>                                
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" placeholder="Meliputi RT/RW" name="meliputi">
+                                    <input type="text" class="form-control" placeholder="Meliputi RT/RW" name="meliputiRTRW">
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" placeholder="RT" name="rt">
+                                    <input type="number" class="form-control" placeholder="RT" name="RT">
                                 </div>
                                 <div class="col-md-2">
-                                    <input type="number" class="form-control" placeholder="RW" name="rw">
-                                </div>                                
-                                <div class="col-md-12">
-                                    <input type="text" class="form-control" placeholder="Ciri & Lokasi TPS" name="ciri">
+                                    <input type="number" class="form-control" placeholder="RW" name="RW">
                                 </div>
-                                <hr>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Latitude" name="latitude" readonly>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" placeholder="Ciri & Lokasi TPS" name="ciriTPS">
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Longitude" name="longitude" readonly>
+                                    <input type="text" class="form-control" placeholder="Latitude" name="lat">
                                 </div>
-                                <hr>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Longitude" name="lng">
+                                </div>
                                 <div class="col-md-12">
                                     <div class="drag-drop-area" id="drag-drop-area">
-                                        Geser gambar disini atau klik untuk Upload
+                                        Drag & Drop Files Here or Click to Upload
                                     </div>
                                     <input type="file" class="form-control" id="multipleImage" name="multipleImage[]" multiple hidden>
                                 </div>
                                 <div class="col-md-12">
                                     <div id="preview-container" class="preview-container"></div>
                                 </div>
-                                <hr>
-                                <div class="col-md-12">
+                                <div class="col-md-6">
                                     <select name="kategori" id="kategori" class="form-control form-select">
                                         <option>Kategori TPS</option>
                                         <option value="indoor">Indoor</option>
@@ -261,7 +230,6 @@
                                 </div>
                                 <div class="col-md-12 mt-4">
                                     <button type="submit" class="btn btn-md btn-primary w-100 shadow">Simpan Data</button>
-                                    <?= form_close(); ?>   
                                 </div>
                             </div>
                         </form>
@@ -275,20 +243,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    function calculateTotal() {
-        let jml_l = parseInt(document.getElementById('jml_l').value) || 0;
-        let jml_p = parseInt(document.getElementById('jml_p').value) || 0;
-
-        let total = jml_l + jml_p;
-
-        document.getElementById('akumulasiJumlah').value = total;
-    }
-
-    document.getElementById('jml_l').addEventListener('input', calculateTotal);
-    document.getElementById('jml_p').addEventListener('input', calculateTotal);
-</script>
 
 <script>
     let map;
