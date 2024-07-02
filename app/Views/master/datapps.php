@@ -9,7 +9,7 @@
                 <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
-                            Jumlah Data TPS
+                            Jumlah Data PPS
                         </h6>
                         <h5 class="font-number-core">60000</h5>
                         <small class="font-subs-core">Tempat Pemungutan Suara</small>
@@ -20,18 +20,9 @@
                 <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
-                            Jumlah Pemilih
+                            Kecamatan
                         </h6>
-                        <div class="row">
-                            <div class="col-6">
-                                <h5 class="font-number-core">60000</h5>
-                                <small class="font-subs-core">Laki - Laki</small>
-                            </div>
-                            <div class="col-6">
-                                <h5 class="font-number-core">60000</h5>
-                                <small class="font-subs-core">Perempuan</small>
-                            </div>
-                        </div>
+                        <h1 class="fw-bold">10</h1>
                     </div>
                 </div>
             </div>
@@ -39,10 +30,9 @@
                 <div class="card bg-gradient-purple border-none shadow">
                     <div class="card-body text-center text-white">
                         <h6>
-                            Total Pemilih
+                            Kelurahan
                         </h6>
-                        <h5 class="font-number-core">60000</h5>
-                        <small class="font-subs-core">Akumulasi Pemilih L + P</small>
+                        <h1 class="fw-bold">69</h1>
                     </div>
                 </div>
             </div>
@@ -78,7 +68,7 @@
 <div class="row align-items-center">
     <div class="col-md-8">
         <h6 class="fw-bold">
-            Peta Lokasi TPS-DPT Kota Tasikmalaya
+        Daftar PPS Kota Tasikmalaya
         </h6>
     </div>
     <div class="col-md-4">

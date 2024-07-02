@@ -47,22 +47,36 @@ class ContentSecurityPolicy extends BaseConfig
      *
      * @var list<string>|string|null
      */
-    public $defaultSrc;
+    // public $defaultSrc;
 
     /**
      * Lists allowed scripts' URLs.
      *
      * @var list<string>|string
      */
-    public $scriptSrc = 'self';
+    // public $scriptSrc = 'self';
 
     /**
      * Lists allowed stylesheets' URLs.
      *
      * @var list<string>|string
      */
-    public $styleSrc = 'self';
+    // public $styleSrc = 'self';
 
+    public $defaultSrc = [
+        'self' => true,
+    ];
+
+    public $scriptSrc = [
+        'self' => true,
+        'https://trusted-scripts.example.com',
+    ];
+
+    public $styleSrc = [
+        'self' => true,
+        'https://trusted-styles.example.com',
+    ];
+    
     /**
      * Defines the origins from which images can be loaded.
      *
