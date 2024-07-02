@@ -17,13 +17,13 @@
             <div class="col-md-4">
                 <div class="w-100 h-auto p-4 rounded border border-none shadow bg-gradient-purple">
                     <div class="row align-items-center">
-                        <div class="col-md-6">
-                            <h4>
+                        <div class="col-6">
+                            <h6>
                                 Data Masuk
-                            </h4>
+                            </h6>
                         </div>
-                        <div class="col-md-6">
-                            <h1 class="fw-bold" style="font-size: 80px;">50%</h1>
+                        <div class="col-6">
+                            <h1 class="fw-bold" style="font-size: 42px;">50%</h1>
                         </div>
                         <div class="col-md-12 text-center">
                             <small class="fw-light">
@@ -40,32 +40,35 @@
     </div>
 </div>
 
-<div class="row" data-slick='{"slidesToShow": 2, "slidesToScroll": 4}'>
-    <?php
+
+<section class="splide" aria-label="Splide Basic HTML Example">
+  <div class="splide__track">
+		<ul class="splide__list">
+        <?php
     for ($i = 1; $i <= 4; $i++) :
     ?>
-        <div class="col-md-3">
-            <div class="card shadow bg-gradient-purple">
+			<li class="splide__slide">
+            <div class="card shadow bg-gradient-purple mx-2">
                 <div class="card-body">
                     <div class="d-flex justify-content-end">
-                        <p>IND</p>
+                        <img src="/assets/img/flagIDN.png" alt="" srcset="" style="width: 15%;">
                     </div>
                     <div class="row align-items-center g-1">
-                        <div class="col-md-3">
-                            <img src="/assets/img/avatar.png" alt="" width="50" height="50" class="rounded-pill border border-2 border-primary shadow">
+                        <div class="col-3">
+                            <img src="/assets/img/avatar.png" alt="" class="w-100 rounded-pill border border-2 border-primary shadow">
                         </div>
-                        <div class="col-md-9">
-                            <p class="fw-bold">Nama Paslon <br>
+                        <div class="col-9">
+                            <small class="fw-bold">Nama Paslon <br>
                                 <span class="fw-light">Calon Wali Kota</span>
-                            </p>
+                            </small>
                         </div>
-                        <div class="col-md-3">
-                            <img src="/assets/img/avatar.png" alt="" width="50" height="50" class="rounded-pill border border-2 border-primary shadow">
+                        <div class="col-3">
+                            <img src="/assets/img/avatar.png" alt="" class="w-100 rounded-pill border border-2 border-primary shadow">
                         </div>
-                        <div class="col-md-9">
-                            <p class="fw-bold">Nama Paslon <br>
+                        <div class="col-9">
+                            <small class="fw-bold">Nama Paslon <br>
                                 <span class="fw-light">Calon Wali Kota</span>
-                            </p>
+                            </small>
                         </div>
                         <div class="col-md-12">
                             <span class="badge text-bg-primary">#Paslon <?= $i ?></span>
@@ -73,25 +76,27 @@
                                 <p class="fw-medium">Jumlah Perolehan Suara</p>
                                 <div class="d-flex justify-content-start align-items-center">
                                     <div class="me-3">
-                                        <h1 class="fw-bold" style="font-size: 70px;">40%</h1>
+                                        <h1 class="fw-bold" style="font-size: 42px;">40%</h1>
                                     </div>
-                                    <small>dari 480.000 suara <br> Sumber <i>Sirekap KPU</i></small>
+                                    <small style="font-size: 10px;">dari 480.000 suara <br> Sumber <i>Sirekap KPU</i></small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    <?php
+            </li>
+            <?php
     endfor;
     ?>
-</div>
+		</ul>
+  </div>
+</section>
 
 <div class="mt-5">
     <h4>Data Rekapitulasi Tabulasi</h4>
     <div class="table-responsive">
-        <table class="table table-bordered table-sm dataTable w-100">
+        <table id="data-table" class="table table-bordered table-sm dataTable w-100">
             <thead class="bg-gradint-purple">
                 <tr>
                     <th rowspan="2" class="text-center">No.</th>
@@ -99,6 +104,8 @@
                     <th rowspan="2" class="text-center">Jumlah DPT</th>
                     <th rowspan="2" class="text-center">Jumlah TPS</th>
                     <th colspan="2" class="text-center">Jumlah Data</th>
+                    <th rowspan="2" class="text-center">Paslon 1</th>
+                    <th rowspan="2" class="text-center">Paslon 2</th>
                     <th rowspan="2" class="text-center">Paslon 1</th>
                     <th rowspan="2" class="text-center">Paslon 2</th>
                 </tr>
@@ -120,6 +127,8 @@
                         <td>10</td>
                         <td>90</td>
                         <td>99</td>
+                        <td>90</td>
+                        <td>99</td>
                     </tr>
                 <?php
                 endfor;
@@ -130,12 +139,20 @@
 </div>
 
 <script>
-    $('.dataTable').DataTable({
-        order: [
-            [3, 'ASC']
-        ]
+    $(document).ready(function() {
+        $('#data-table').DataTable({
+            scrollX: true,
+            scrollCollapse: true,
+            fixedColumns: {
+                leftColumns: 2 // Freeze the first two columns (No. and Kecamatan)
+            },
+            order: [
+                [0, 'asc'] // Initial sorting by the first column (No.)
+            ]
+        });
     });
 </script>
+
 
 <script>
     options = {

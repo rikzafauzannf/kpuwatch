@@ -52,7 +52,7 @@
         <div class="card border-none border">
             <div class="card-body">
                 <form action="">
-                    <div class="row">
+                    <div class="row g-2">
                         <div class="col-md-12">
                             <h5>Filter Data</h5>
                         </div>

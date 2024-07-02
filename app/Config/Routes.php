@@ -9,6 +9,8 @@ $routes->get('/', 'AuthController::index');
 $routes->post('/login', 'AuthController::login');
 
 $routes->post('/user', 'UserController::store');
+
+
 $routes->post('/useredit/(:any)', 'UserController::update/$1');
 $routes->post('/usersdelete/(:any)', 'UserController::delete/$1');
 
@@ -30,3 +32,7 @@ $routes->post('/udatatpsavedelete/(:any)', 'KelurahanController::dataTpsdelete/$
 
 // userManagement
 $routes->get('/usermanagement', 'UserController::index');
+// master
+$routes->get('/masterpps', 'MasterController::index');
+$routes->get('/masterppk', 'MasterController::datappk');
+
