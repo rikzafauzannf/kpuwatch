@@ -42,23 +42,11 @@
         <div class="card border-none border">
             <div class="card-body">
                 <form action="">
-                    <div class="row g-2">
-                        <div class="col-md-12">
-                            <h5>Filter Data</h5>
-                        </div>
-                        <div class="col-md-6">
-                            <select name="" id="" class="form-control form-select">
-                                <option> Pilih Kecamatan</option>
-                                <option value="1">1</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <select name="" id="" class="form-control form-select">
-                                <option> Pilih Kelurahan</option>
-                                <option value="1">1</option>
-                            </select>
-                        </div>
-                    </div>
+                    <h5>Filter Data</h5>
+                    <select name="" id="" class="form-control form-select">
+                        <option> Pilih Kecamatan</option>
+                        <option value="1">1</option>
+                    </select>
                 </form>
             </div>
         </div>
@@ -68,7 +56,7 @@
 <div class="row align-items-center">
     <div class="col-md-8">
         <h6 class="fw-bold" style="font-size: 32px;">
-        Daftar PPS Kota Tasikmalaya
+        Daftar PPK Kota Tasikmalaya
         </h6>
     </div>
     <div class="col-md-4">
@@ -110,9 +98,11 @@
                     <tr>
                         <th scope="col" class="fs-6 text-center">No.</th>
                         <th scope="col" class="fs-6">Kecamatan</th>
-                        <th scope="col" class="fs-6">Kelurahan</th>
                         <th scope="col" class="fs-6">Nama Lengkap</th>
-                        <th scope="col" class="fs-6">Jabatan</th>
+                        <th scope="col" class="fs-6">NIP</th>
+                        <th scope="col" class="fs-6">Pangkat/GOL</th>
+                        <th scope="col" class="fs-6">No Hanphone</th>
+                        <th scope="col" class="fs-6">Disuslkan Sebagai</th>
                     </tr>
                 </thead>
                 <tbody class="table-group-divider">
@@ -122,9 +112,11 @@
                         <tr>
                             <th scope="row" class="text-center"><?= $i ?></th>
                             <td>Mangkubumi</td>
-                            <td>Mangkubumi</td>
-                            <td>MUKIDI</td>
-                            <td>SEKRI</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                     <?php
                     endfor;
@@ -157,12 +149,6 @@
                         <div class="col-md-12"  data-bs-toggle="tooltip" data-bs-title="NIP / Username">
                             <div class="input-group">
                                 <span class="input-group-text" id="basic-addon1"><i class="bi bi-envelope"></i></span>
-                                <input type="text" class="form-control" placeholder="NIP" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
                                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>
@@ -174,7 +160,13 @@
                         </div>
                         <div class="col-md-12">
                             <div class="input-group">
-                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-phone"></i></span>
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-person"></i></span>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1"><i class="bi bi-key"></i></span>
                                 <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                         </div>

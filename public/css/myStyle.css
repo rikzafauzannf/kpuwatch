@@ -8,26 +8,46 @@
     background: linear-gradient(to top,#15047a,#9672ff);
     color: white;
     border-radius: 20px;
+    border: none;
 }
 
 .btn-gradient-purple{
     background: linear-gradient(to top,#15047a,#9672ff);
     color: white;
     transition: all ease-in-out ;
+    border: none;
 }
 
 .btn-gradient-purple:hover{
     background: linear-gradient(to top,#16047aaf,#9572ffad);
     color: white;
+    border: none;
 }
 
 .font-number-core{
-    font-size: 20px;
+    font-size:30px;
     font-weight: bold;
 }
 .font-subs-core{
     font-size: 11px;
     font-weight: 600;
+}
+
+.bg-blue{
+    background: #0456B6;
+}
+.bg-blue-gradient{
+    background: linear-gradient(to top right,#0456B6, #007bff);
+}
+
+.btn-blue-gradient{
+    background: linear-gradient(to top right,#0456B6, #007bff);
+    color: white;
+}
+
+.btn-blue-gradient:hover{
+    background: linear-gradient(to top right,#0457b6a5, #007bffa9);
+    color: white;
 }
 
 /* upload image */
